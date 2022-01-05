@@ -24,6 +24,7 @@ public class PlayerActivity extends AppCompatActivity {
             // This line is for testing github
             String test = "Á hự á hự";
             String test1 = "Ứ hạ ứ hạ";
+            String test2 = "á á á";
         }
 
 
