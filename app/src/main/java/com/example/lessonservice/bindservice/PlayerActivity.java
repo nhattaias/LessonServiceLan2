@@ -10,19 +10,20 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
 
 import com.example.lessonservice.databinding.ActivityPlayerBinding;
 
 public class PlayerActivity extends AppCompatActivity {
     private ActivityPlayerBinding binding;
     private PlayService playService;
-    private ServiceConnection serviceConnection = new ServiceConnection() {
+    private final ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             // Đây là nơi sẽ lấy Service ra để điều khiển sau khi kết nối thành công
             playService = ((PlayService.MyBinder) iBinder).getService();
+            // This line is for testing github
         }
+
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
@@ -42,12 +43,7 @@ public class PlayerActivity extends AppCompatActivity {
         binding.btPlay.setOnClickListener(view -> {
             playService.play();
             binding.seekbar.setMax(playService.getTotalTime());
-            playService.getCurrentTime().observe(this, new Observer<Integer>() {
-                @Override
-                public void onChanged(Integer integer) {
-                    binding.seekbar.setProgress(integer);
-                }
-            });
+            playService.getCurrentTime().observe(this, integer -> binding.seekbar.setProgress(integer));
         });
         binding.btPause.setOnClickListener(view -> playService.pause());
         binding.seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
