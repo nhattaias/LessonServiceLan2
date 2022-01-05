@@ -22,7 +22,7 @@ public class PlayerActivity extends AppCompatActivity {
             // Đây là nơi sẽ lấy Service ra để điều khiển sau khi kết nối thành công
             playService = ((PlayService.MyBinder) iBinder).getService();
             // This line is for testing github
-            String test = "Á hự á hự"
+            String test = "Á hự á hự";
         }
 
 
