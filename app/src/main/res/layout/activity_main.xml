@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="5dp"
+    tools:context=".service.MainActivity">
+
+    <EditText
+        android:hint="@string/txt_put_url_here"
+        android:textColorHint="@color/white"
+        android:id="@+id/edt_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:background="@color/purple_700"
+        android:autofillHints="name"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/bt_download"
+        android:layout_width="wrap_content"
+        android:text="@string/txt_download"
+        android:textSize="12sp"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/iv_download_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription" />
+
+</LinearLayout>
