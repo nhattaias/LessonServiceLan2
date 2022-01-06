@@ -21,6 +21,12 @@ public class PlayerActivity extends AppCompatActivity {
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             // Đây là nơi sẽ lấy Service ra để điều khiển sau khi kết nối thành công
             playService = ((PlayService.MyBinder) iBinder).getService();
+            // This line is for testing github
+            String test = "Á hự á hự";
+            String test1 = "Ứ hạ ứ hạ";
+            String test2 = "á á á";
+            String test3 = "á á á";
+            String test4 = "á á á";
         }
 
 
