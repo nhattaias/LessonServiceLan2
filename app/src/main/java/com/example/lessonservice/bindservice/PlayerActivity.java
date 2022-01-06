@@ -26,6 +26,7 @@ public class PlayerActivity extends AppCompatActivity {
             String test1 = "Ứ hạ ứ hạ";
             String test2 = "á á á";
             String test3 = "á á á";
+            String test4 = "á á á";
         }
 
 
